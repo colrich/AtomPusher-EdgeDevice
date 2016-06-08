@@ -1,0 +1,12 @@
+{
+    "dependencies": {
+        "crypto-js": ">= 0.0.1",
+        "feedparser": ">= 0.0.1",
+        "is-undefined": ">= 0.0.1",
+        "minimist": ">= 0.0.1",
+        "moment": ">= 0.0.1",
+        "mqtt": ">= 0.0.1",
+        "request": ">= 0.0.1",
+        "websocket-stream": ">= 0.0.1",
+        "aws-iot-device-sdk": ">= 0.0.1" }
+}

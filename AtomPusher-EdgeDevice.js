@@ -165,6 +165,13 @@ function processTest(args) {
     
     // then run every minute forever
     makeinterval(monitorFeed, args, device, 60*1000);
+
+    // finally, we set up a web server here and listen for requests. we don't handle any at this time
+    // but this means we can run inside PCF's elastic runtime without disabling the health monitor
+    var http = require('http');
+    var server = http.createServer(function(request, response) {
+	response.end('nothing here');
+    });
 }
 
 module.exports = cmdLineProcess;

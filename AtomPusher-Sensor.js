@@ -95,7 +95,7 @@ function monitorFeed(args, device) {
 		items[i].feedtag = args.Tag;
 
 		// publish the item; this sends the entry to the AWS IoT queue
-		//		device.publish('feeds', JSON.stringify(items[i]));
+		device.publish('feeds', JSON.stringify(items[i]));
 	    }
 	}
 
@@ -172,6 +172,8 @@ function processTest(args) {
     var server = http.createServer(function(request, response) {
 	response.end('nothing here');
     });
+    if (process.env.PORT) server.listen(parseInt(process.env.PORT));
+    else server.listen(8899);
 }
 
 module.exports = cmdLineProcess;

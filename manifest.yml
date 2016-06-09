@@ -1,0 +1,6 @@
+---
+applications:
+- name: AP-S-NationalWeatherAlerts
+  memory: 256M
+  instances: 1
+  command: node AtomPusher-Sensor.js -f certs/ -u "http://alerts.weather.gov/cap/us.php?x=0" -t "pcfnational"
